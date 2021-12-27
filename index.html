@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Calcolatore Scrabble</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://raw.githubusercontent.com/shhdharmen/keyboard-css/main/dist/css/main.min.css" rel="stylesheet" crossorigin="anonymous">
+  <style>
+	.sub{
+	  vertical-align: sub;
+	  font-size: medium;
+	}
+	.square-btn {
+	  height: 55px;
+	  width: 55px;
+	}
+	.row {
+	  padding-top: 20px;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+	  <div class="row col-sm-14">
+		  <label for="word" class="col-form-label col-sm-1">Contenuto:</label>
+		  <div class="col-sm-6">
+			<input type="text" class="form-control" id="word" maxlength=14" placeholder="Inserisci qui la parola">
+		  </div>
+	  </div>
+	  <div class="row">
+		<div class="col">
+			<button type="button" id="letter01" class="square-btn kbc-button btn-light word-letter"></button>
+		</div>
+		<div class="col">
+			<button type="button" id="letter02" class="square-btn kbc-button btn-light word-letter"></button>
+		</div>
+		<div class="col">
+			<button type="button" id="letter03" class="square-btn kbc-button btn-light word-letter"></button>
+		</div>
+		<div class="col">
+			<button type="button" id="letter04" class="square-btn kbc-button btn-light word-letter"></button>
+		</div>
+		<div class="col">
+			<button type="button" id="letter05" class="square-btn kbc-button btn-light word-letter"></button>
+		</div>
+		<div class="col">
+			<button type="button" id="letter06" class="square-btn kbc-button btn-light word-letter"></button>
+		</div>
+		<div class="col">
+			<button type="button" id="letter07" class="square-btn kbc-button btn-light word-letter"></button>
+		</div>
+		<div class="col">
+			<button type="button" id="letter08" class="square-btn kbc-button btn-light word-letter"></button>
+		</div>
+		<div class="col">
+			<button type="button" id="letter09" class="square-btn kbc-button btn-light word-letter"></button>
+		</div>
+		<div class="col">
+			<button type="button" id="letter10" class="square-btn kbc-button btn-light word-letter"></button>
+		</div>
+		<div class="col">
+			<button type="button" id="letter11" class="square-btn kbc-button btn-light word-letter"></button>
+		</div>
+		<div class="col">
+			<button type="button" id="letter12" class="square-btn kbc-button btn-light word-letter"></button>
+		</div>
+		<div class="col">
+			<button type="button" id="letter13" class="square-btn kbc-button btn-light word-letter"></button>
+		</div>
+		<div class="col">
+			<button type="button" id="letter14" class="square-btn kbc-button btn-light word-letter"></button>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="mult1" value="1" checked hidden>
+			  <input type="radio" name="mult1" value="2" hidden>
+			  <input type="radio" name="mult1" value="3" hidden>
+			  <input type="radio" name="mult1" value="0" hidden>
+			  <button type="button" id="toggler1" class="square-btn btn btn-secondary letter-mult">1x</button>
+			</div>
+		</div>
+		<div class="col">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="mult2" value="1" checked hidden>
+			  <input type="radio" name="mult2" value="2" hidden>
+			  <input type="radio" name="mult2" value="3" hidden>
+			  <input type="radio" name="mult2" value="0" hidden>
+			  <button type="button" id="toggler2" class="square-btn btn btn-secondary letter-mult">1x</button>
+			</div>
+		</div>
+		<div class="col">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="mult3" value="1" checked hidden>
+			  <input type="radio" name="mult3" value="2" hidden>
+			  <input type="radio" name="mult3" value="3" hidden>
+			  <input type="radio" name="mult3" value="0" hidden>
+			  <button type="button" id="toggler3" class="square-btn btn btn-secondary letter-mult">1x</button>
+			</div>
+		</div>
+		<div class="col">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="mult4" value="1" checked hidden>
+			  <input type="radio" name="mult4" value="2" hidden>
+			  <input type="radio" name="mult4" value="3" hidden>
+			  <input type="radio" name="mult4" value="0" hidden>
+			  <button type="button" id="toggler4" class="square-btn btn btn-secondary letter-mult">1x</button>
+			</div>
+		</div>
+		<div class="col">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="mult5" value="1" checked hidden>
+			  <input type="radio" name="mult5" value="2" hidden>
+			  <input type="radio" name="mult5" value="3" hidden>
+			  <input type="radio" name="mult5" value="0" hidden>
+			  <button type="button" id="toggler5" class="square-btn btn btn-secondary letter-mult">1x</button>
+			</div>
+		</div>
+		<div class="col">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="mult6" value="1" checked hidden>
+			  <input type="radio" name="mult6" value="2" hidden>
+			  <input type="radio" name="mult6" value="3" hidden>
+			  <input type="radio" name="mult6" value="0" hidden>
+			  <button type="button" id="toggler6" class="square-btn btn btn-secondary letter-mult">1x</button>
+			</div>
+		</div>
+		<div class="col">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="mult7" value="1" checked hidden>
+			  <input type="radio" name="mult7" value="2" hidden>
+			  <input type="radio" name="mult7" value="3" hidden>
+			  <input type="radio" name="mult7" value="0" hidden>
+			  <button type="button" id="toggler7" class="square-btn btn btn-secondary letter-mult">1x</button>
+			</div>
+		</div>
+		<div class="col">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="mult8" value="1" checked hidden>
+			  <input type="radio" name="mult8" value="2" hidden>
+			  <input type="radio" name="mult8" value="3" hidden>
+			  <input type="radio" name="mult8" value="0" hidden>
+			  <button type="button" id="toggler8" class="square-btn btn btn-secondary letter-mult">1x</button>
+			</div>
+		</div>
+		<div class="col">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="mult9" value="1" checked hidden>
+			  <input type="radio" name="mult9" value="2" hidden>
+			  <input type="radio" name="mult9" value="3" hidden>
+			  <input type="radio" name="mult9" value="0" hidden>
+			  <button type="button" id="toggler9" class="square-btn btn btn-secondary letter-mult">1x</button>
+			</div>
+		</div>
+		<div class="col">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="mult10" value="1" checked hidden>
+			  <input type="radio" name="mult10" value="2" hidden>
+			  <input type="radio" name="mult10" value="3" hidden>
+			  <input type="radio" name="mult10" value="0" hidden>
+			  <button type="button" id="toggler10" class="square-btn btn btn-secondary letter-mult">1x</button>
+			</div>
+		</div>
+		<div class="col">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="mult11" value="1" checked hidden>
+			  <input type="radio" name="mult11" value="2" hidden>
+			  <input type="radio" name="mult11" value="3" hidden>
+			  <input type="radio" name="mult11" value="0" hidden>
+			  <button type="button" id="toggler11" class="square-btn btn btn-secondary letter-mult">1x</button>
+			</div>
+		</div>
+		<div class="col">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="mult12" value="1" checked hidden>
+			  <input type="radio" name="mult12" value="2" hidden>
+			  <input type="radio" name="mult12" value="3" hidden>
+			  <input type="radio" name="mult12" value="0" hidden>
+			  <button type="button" id="toggler12" class="square-btn btn btn-secondary letter-mult">1x</button>
+			</div>
+		</div>
+		<div class="col">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="mult13" value="1" checked hidden>
+			  <input type="radio" name="mult13" value="2" hidden>
+			  <input type="radio" name="mult13" value="3" hidden>
+			  <input type="radio" name="mult13" value="0" hidden>
+			  <button type="button" id="toggler13" class="square-btn btn btn-secondary letter-mult">1x</button>
+			</div>
+		</div>
+		<div class="col">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="mult14" value="1" checked hidden>
+			  <input type="radio" name="mult14" value="2" hidden>
+			  <input type="radio" name="mult14" value="3" hidden>
+			  <input type="radio" name="mult14" value="0" hidden>
+			  <button type="button" id="toggler14" class="square-btn btn btn-secondary letter-mult">1x</button>
+			</div>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-1">
+			<input type="radio" name="bingo" value="0" checked hidden>
+			<input type="radio" name="bingo" value="50" hidden>
+			<button type="button" id="toggleBingo" class="btn btn-secondary bingo-add">Bingo</button>
+		</div>
+		<div class="col-4">
+			<div class="btn-group-toggle" data-toggle="buttons">
+			  <input type="radio" name="wordMult" value="1" checked hidden>
+			  <input type="radio" name="wordMult" value="2" hidden>
+			  <input type="radio" name="wordMult" value="3" hidden>
+			  <button type="button" id="toggleWordMult" class="btn btn-secondary word-mult">Parola 1x</button>
+			</div>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col">
+			Punteggio: <span id="total" class=""></span>
+		</div>
+	  </div>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script>
+		var dict = {
+			"A": 1,
+			"B": 5,
+			"C": 2,
+			"D": 5,
+			"E": 1,
+			"F": 5,
+			"G": 8,
+			"H": 8,
+			"I": 1,
+			"L": 3,
+			"M": 3,
+			"N": 3,
+			"O": 1,
+			"P": 5,
+			"Q": 10,
+			"R": 2,
+			"S": 2,
+			"T": 2,
+			"U": 3,
+			"V": 5,
+			"Z": 8
+		};
+		
+		var validKeys = [ 
+			8, //backspace
+			35, 36, // end/home
+			37, 39, // left/right arrow
+			46, //canc
+			65, 66, 67, 68, 69, 70, 71, 72, 73, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 90
+		];
+		
+		$(function() {
+			function reset() {
+				$('#word').val('');
+				$('input[name^="mult"][value=1]').each(function(index, value) {
+					$(this).prop('checked', true);
+				});
+				$('input[name="bingo"][value=0]').each(function(index, value) {
+					$(this).prop('checked', true);
+				});
+				$('input[name="wordMult"][value=1]').each(function(index, value) {
+					$(this).prop('checked', true);
+				});
+			}
+		
+			function calcTotal() {
+				var letterTotals = 0;
+				var chars = $('#word').val().split("");
+				chars.forEach(function(currentValue, index) {
+					var multiplierName = 'mult' + (index+1);
+					letterTotals += (dict[currentValue.toUpperCase()] * $('input[name="' + multiplierName + '"]:checked').val());
+				});
+				letterTotals = letterTotals * parseInt($('input[name="wordMult"]:checked').val());
+				letterTotals += parseInt($('input[name="bingo"]:checked').val());
+				$('#total').html(letterTotals);
+			}
+		
+			reset();
+		
+			$('#word')
+			.keydown(function(event){
+			  if (validKeys.indexOf(event.which) < 0) {
+			   event.preventDefault();
+			  }
+			})
+			.keyup(function(){
+			  var chars = $(this).val().split("");
+			  $('.word-letter').each(function(index, value) {
+			      if (index < chars.length) {
+					$(this).html('<span class="sub fs-3">' + chars[index].toUpperCase() + '</span> <span class="sub fs-6">' + dict[chars[index].toUpperCase()] + '</span>');
+				  } else {
+					$(this).html('');
+				  }
+				  calcTotal();
+				});
+			});
+		
+			$('.letter-mult').click(function() {
+			  var $radios = $(this).parent().children('input[name^="mult"]');
+			  var colorClasses = ["btn-secondary", "btn-primary", "btn-success", "btn-light"];
+			  var $checked = $radios.filter(':checked');
+			  var $next = $radios.eq($radios.index($checked) + 1);
+			  if (!$next.length) {
+				$next = $radios.first();
+			  }
+			  $next.prop("checked", true);
+			  var newValue = $radios.filter(':checked').val();
+			  $(this)
+				.removeClass(colorClasses.join(" "))
+				.addClass(colorClasses[newValue-1])
+				.text(newValue + 'x');
+			  calcTotal();
+			});
+			
+			$('#toggleBingo').click(function() {
+			  var $radios = $(this).parent().children('input[name="bingo"]');
+			  var colorClasses = ["btn-secondary", "btn-primary"];
+			  var $checked = $radios.filter(':checked');
+			  var $next = $radios.eq($radios.index($checked) + 1);
+			  if (!$next.length) {
+				$next = $radios.first();
+			  }
+			  $next.prop("checked", true);
+			  var newValue = $radios.filter(':checked').index();
+			  $(this)
+				.removeClass(colorClasses.join(" "))
+				.addClass(colorClasses[newValue]);
+			  calcTotal();
+			});
+			
+			$('#toggleWordMult').click(function() {
+			  var $radios = $(this).parent().children('input[name="wordMult"]');
+			  var colorClasses = ["btn-secondary", "btn-primary", "btn-success", "btn-light"];
+			  var $checked = $radios.filter(':checked');
+			  var $next = $radios.eq($radios.index($checked) + 1);
+			  if (!$next.length) {
+				$next = $radios.first();
+			  }
+			  $next.prop("checked", true);
+			  var newValue = $radios.filter(':checked').val();
+			  $(this)
+				.removeClass(colorClasses.join(" "))
+				.addClass(colorClasses[newValue-1])
+				.text('Parola ' + newValue + 'x');
+			  calcTotal();
+			});
+			
+			
+		});
+	</script>
+</body>
+</html>
