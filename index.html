@@ -20,13 +20,15 @@
 </style>
 </head>
 <body>
-	<div class="container">
-	  <div class="row col-sm-14">
-		  <label for="word" class="col-form-label col-sm-1">Parola:</label>
-		  <div class="col-sm-6">
+	<div class="container-lg">
+	  <div class="row">
+		  <div class="col-1">
+			<label for="word" class="col-form-label">Parola:</label>
+		  </div>
+		  <div class="col-6">
 			<input type="text" class="form-control" id="word" maxlength=14" placeholder="Inserisci qui la parola per calcolare il punteggio">
 		  </div>
-		  <div class="col-4">
+		  <div class="col">
 			<button type="button" id="reset" class="btn btn-secondary">Reset</button>
 		</div>
 	  </div>
@@ -67,12 +69,14 @@
 		<div class="col">
 			<button type="button" id="letter12" class="square-btn kbc-button btn-light word-letter"></button>
 		</div>
+		<!--
 		<div class="col">
 			<button type="button" id="letter13" class="square-btn kbc-button btn-light word-letter"></button>
 		</div>
 		<div class="col">
 			<button type="button" id="letter14" class="square-btn kbc-button btn-light word-letter"></button>
 		</div>
+		-->
 	  </div>
 	  <div class="row">
 		<div class="col">
@@ -183,6 +187,7 @@
 			  <button type="button" id="toggler12" class="square-btn btn btn-secondary letter-mult">1x</button>
 			</div>
 		</div>
+		<!--
 		<div class="col">
 			<div class="btn-group-toggle" data-toggle="buttons">
 			  <input type="radio" name="mult13" value="1" checked hidden>
@@ -201,6 +206,7 @@
 			  <button type="button" id="toggler14" class="square-btn btn btn-secondary letter-mult">1x</button>
 			</div>
 		</div>
+		-->
 	  </div>
 	  <div class="row">
 		<div class="col-1">
@@ -208,7 +214,7 @@
 			<input type="radio" name="bingo" value="50" hidden>
 			<button type="button" id="toggleBingo" class="btn btn-secondary bingo-add">Bingo</button>
 		</div>
-		<div class="col-4">
+		<div class="col">
 			<div class="btn-group-toggle" data-toggle="buttons">
 			  <input type="radio" name="wordMult" value="1" checked hidden>
 			  <input type="radio" name="wordMult" value="2" hidden>
@@ -219,7 +225,7 @@
 	  </div>
 	  <div class="row">
 		<div class="col">
-			Punteggio: <span id="total" class=""></span>
+			Punteggio: <strong><span id="total" class=""></span></strong>
 		</div>
 	  </div>
 	</div>
