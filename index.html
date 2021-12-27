@@ -22,10 +22,13 @@
 <body>
 	<div class="container">
 	  <div class="row col-sm-14">
-		  <label for="word" class="col-form-label col-sm-1">Contenuto:</label>
+		  <label for="word" class="col-form-label col-sm-1">Parola:</label>
 		  <div class="col-sm-6">
-			<input type="text" class="form-control" id="word" maxlength=14" placeholder="Inserisci qui la parola">
+			<input type="text" class="form-control" id="word" maxlength=14" placeholder="Inserisci qui la parola per calcolare il punteggio">
 		  </div>
+		  <div class="col-4">
+			<button type="button" id="reset" class="btn btn-secondary">Reset</button>
+		</div>
 	  </div>
 	  <div class="row">
 		<div class="col">
@@ -258,7 +261,7 @@
 		
 		$(function() {
 			function reset() {
-				$('#word').val('');
+				$('#word').val('').focus();
 				$('input[name^="mult"][value=1]').each(function(index, value) {
 					$(this).prop('checked', true);
 				});
@@ -268,6 +271,7 @@
 				$('input[name="wordMult"][value=1]').each(function(index, value) {
 					$(this).prop('checked', true);
 				});
+				$('#total').html(0);
 			}
 		
 			function calcTotal() {
@@ -352,7 +356,9 @@
 			  calcTotal();
 			});
 			
-			
+			$('#reset').click(function() {
+				location.reload();
+			});
 		});
 	</script>
 </body>
