@@ -1,0 +1,14 @@
+.sub{
+  vertical-align: sub;
+  font-size: medium;
+}
+.square-btn {
+  height: 55px;
+  width: 55px;
+}
+.row {
+  padding-top: 20px;
+}
+.fs-7 {
+  font-size: 0.8rem !important;
+}
