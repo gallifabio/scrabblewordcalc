@@ -17,6 +17,9 @@
 	.row {
 	  padding-top: 20px;
 	}
+	.fs-7 {
+	  font-size: 0.8rem !important;
+	}
 </style>
 </head>
 <body>
@@ -304,7 +307,7 @@
 			  var chars = $(this).val().split("");
 			  $('.word-letter').each(function(index, value) {
 			      if (index < chars.length) {
-					$(this).html('<span class="sub fs-3">' + chars[index].toUpperCase() + '</span> <span class="sub fs-6">' + dict[chars[index].toUpperCase()] + '</span>');
+					$(this).html('<span class="sub fs-3">' + chars[index].toUpperCase() + '</span> <span class="sub fs-7">' + dict[chars[index].toUpperCase()] + '</span>');
 				  } else {
 					$(this).html('');
 				  }
