@@ -20,14 +20,14 @@
 	.fs-7 {
 	  font-size: 0.8rem !important;
 	}
-	.letter-mult {
+	.letter-multipliers button {
 	  margin-left: 6px;
 	}
 </style>
 </head>
 <body>
 	<div class="container-lg">
-	  <div class="row">
+	  <div class="row g-0">
 		  <div class="col-1">
 			<label for="word" class="col-form-label">Parola:</label>
 		  </div>
@@ -38,7 +38,7 @@
 			<button type="button" id="reset" class="btn btn-secondary">Reset</button>
 		</div>
 	  </div>
-	  <div class="row">
+	  <div class="row gx-0">
 		<div class="col">
 			<button type="button" id="letter01" class="square-btn kbc-button btn-light word-letter"></button>
 		</div>
@@ -76,7 +76,7 @@
 			<button type="button" id="letter12" class="square-btn kbc-button btn-light word-letter"></button>
 		</div>
 	  </div>
-	  <div class="row">
+	  <div class="row gx-0 letter-multipliers">
 		<div class="col">
 			<div class="btn-group-toggle" data-toggle="buttons">
 			  <input type="radio" name="mult1" value="1" checked hidden>
@@ -186,7 +186,7 @@
 			</div>
 		</div>
 	  </div>
-	  <div class="row">
+	  <div class="row gx-0">
 		<div class="col-1">
 			<input type="radio" name="bingo" value="0" checked hidden>
 			<input type="radio" name="bingo" value="50" hidden>
@@ -201,7 +201,7 @@
 			</div>
 		</div>
 	  </div>
-	  <div class="row">
+	  <div class="row gx-0">
 		<div class="col">
 			Punteggio: <strong><span id="total" class=""></span></strong>
 		</div>
